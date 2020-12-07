@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n1,n2,m,n;
+	    cin>>n1;
+	    int a[n1],i;
+	    for(i=0;i<n1;i++)
+	    cin>>a[i];
+	    cin>>n2;
+	    int b[n2];
+	    for(i=0;i<n2;i++)
+	    cin>>b[i];
+	    m=a[0],n=b[0];
+	    for(i=0;i<n1;i++)
+	    m=max(a[i],m);
+	    
+	    for(i=0;i<n2;i++)
+	    n=min(b[i],n);
+
+	    cout<<(m*n)<<endl;
+	}
+	return 0;
+}
