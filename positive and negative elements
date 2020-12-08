@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i;
+	    cin>>n;
+	    int arr[n];
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    int pos[n/2],neg[n/2];
+	    int k=0;
+	    for(i=0;i<n;i++)
+	    {
+	        if(arr[i]>=0)
+	        {
+	            pos[k]=arr[i];
+	            k++;
+	        }
+	    }
+	    k=0;
+	    for(i=0;i<n;i++)
+	    {
+	        if(arr[i]<0)
+	        {
+	            neg[k]=arr[i];
+	            k++;
+	        }
+	    }
+	    for(i=0;i<n/2;i++)
+	    {
+	        cout<<pos[i]<<" "<<neg[i]<<" ";
+	    }
+	    cout<<"\n";
+	}
+	return 0;
+}
