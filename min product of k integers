@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+void sort(int n, int arr[])
+{
+    int i,j,temp;
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+}
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i;
+	    long long int p=1;
+	    cin>>n;
+	    int arr[n],k;
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    cin>>k;
+	    sort(n,arr);
+	    for(i=0;i<k;i++)
+	    {
+	        p=(p*arr[i])%1000000007;
+	    }
+	    cout<<p<<endl;
+	}
+	return 0;
+}
