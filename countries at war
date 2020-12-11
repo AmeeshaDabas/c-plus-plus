@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i;
+	    cin>>n;
+	    int a[n],b[n],a1=0,b1=0;
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>a[i];
+	    }
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>b[i];
+	    }
+	    for(i=0;i<n;i++)
+	    {
+	        if(a[i]>b[i])
+	        b1++;
+	        if(a[i]==b[i])
+	        {
+	        a1++;
+	        b1++;
+	        }
+	        if(a[i]<b[i])
+	        a1++;
+	    }
+	    cout<<(n-a1)<<" "<<(n-b1)<<" ";
+	    if(a1==b1)
+	    cout<<"DRAW";
+	    else if(a1>b1)
+	    cout<<"B";
+	    else
+	    cout<<"A";
+	    cout<<"\n";
+	}
+	return 0;
+}
