@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,k,c=0;
+	    cin>>n>>k;
+	    int arr[n],i;
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    for(i=0;i<n;i++)
+	    {
+	        c=1;
+	       for(int j=0;j<n;j++) 
+	       {
+	           if(j==i)
+	           continue;
+	           if(arr[i]==arr[j])
+	           {
+	               c++;
+	           }
+	       }
+	       if(c==k)
+	       {
+	           cout<<arr[i]<<endl;
+	           c=-99;
+	           break;
+	       }
+	    }
+	    if(c!=-99)
+	    cout<<"-1"<<endl;
+	}
+	return 0;
+}
