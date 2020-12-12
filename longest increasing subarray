@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i,count=1,max_freq=0;
+	    cin>>n;
+	    int arr[n];
+	    for(i=0;i<n;i++)
+	    cin>>arr[i];
+	    for(i=0;i<n-1;i++)
+	    {
+	        if(arr[i+1]>arr[i])
+	        {
+	            count++;
+	            max_freq=max(max_freq,count);
+	        }
+	        else
+	        {
+	         count=1;
+	        }
+	    }
+	    if(n==1)
+	    cout<<"1\n";
+	    else
+	    cout<<max_freq<<endl;
+	}
+	return 0;
+}
