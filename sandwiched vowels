@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool isVowel(char a)
+{
+    if(a=='A'||a=='E'||a=='I'||a=='O'||a=='U'||a=='a'||a=='e'||a=='i'||a=='o'||a=='u')
+      return true;
+    else 
+      return false;
+}
+int main()
+ {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    string s;
+	    cin>>s;
+	    for(int i=1;i<s.length()-1;i++)
+	    {
+	        if(isVowel(s[i]))
+	          if((!isVowel(s[i-1]))&&(!isVowel(s[i+1])))
+	            s.erase(s.begin() + i);
+	    }
+	    cout<<s<<endl;
+	
+	}
+	return 0;
+}
