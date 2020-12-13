@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    long long int n,i,j,c=1;
+	    cin>>n;
+	    long long int arr[n];
+	    for(i=0;i<n;i++)
+	    cin>>arr[i];
+	    int max_ele=arr[0];
+	    for(i=1;i<n;i++)
+	    {
+	        if(arr[i]>max_ele)
+	        {c++;
+	         max_ele=arr[i];
+	        }
+	    }
+	    cout<<c<<endl;
+	}
+	return 0;
+}
