@@ -1,0 +1,25 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+int disc(int n, int a, int b, int c)
+{
+    if(n==1)
+    cout<<"move disk "<<n<<" from rod "<<a<<" to rod "<<c<<endl;
+    else
+   { disc(n-1,a,c,b);
+    cout<<"move disk "<<n<<" from rod "<<a<<" to rod "<<c<<endl;
+    disc(n-1,b,a,c);
+   }
+}
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    disc(n,1,2,3);
+	    cout<<pow(2,n)-1<<endl;
+	}
+	return 0;
+}
