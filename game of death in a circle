@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int jose(int n,int k)
+{
+    if(n==0)
+    return 0;
+    else
+    return((jose(n-1,k)+k)%n);
+}
+int myjose(int n,int k)
+{
+    return jose(n,k)+1;
+}
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,k;
+	    cin>>n>>k;
+	    cout<<myjose(n,k)<<endl;
+	}
+	return 0;
+}
