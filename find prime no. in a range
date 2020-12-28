@@ -1,0 +1,32 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n1,n2;
+	    cin>>n1>>n2;
+	    bool arr[n2+1];
+	    memset(arr,true,sizeof(arr));
+	    for(int p=2;p*p<=n2;p++)
+	    {
+	       if(arr[p]==true)
+	       {
+	           for(int i=p*p;i<=n2;i+=p)
+	           {
+	               arr[i]=false;
+	           }
+	       }
+	    }
+	    for(int i=2;i<=n2;i++)
+	    {
+	        if(i>=n1 && arr[i]==true)
+	        {cout<<i<<" ";}
+	    }
+	    cout<<"\n";
+	}
+	return 0;
+}
