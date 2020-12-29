@@ -1,0 +1,19 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int digitsInFactorial(int N)
+{
+    double dig=0;
+    for(int i=2;i<=N;i++)
+    {
+        dig+=log10(i);
+    }
+    return floor(dig)+1;
+}
+int main()
+{
+ int n;
+ cin>>n;
+ cout<<digitsInFactorial(n)<<endl;
+ return 0;
+}
